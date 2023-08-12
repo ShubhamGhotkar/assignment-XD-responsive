@@ -4,16 +4,481 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <header class="header">
-      <div class="header_container">
-        <div class="header_container-logo"></div>
-        <div class="header_container-nav"></div>
+      <div
+        class="header_container d-flex justify-content-between align-items-center flex-column gap-5"
+      >
+        <div class="header_container-logo">LOGO</div>
+        <ul class="header_container-nav-list d-flex list-unstyled gap-5">
+          <li class="header_container-nav-list-item me-3">Nav1</li>
+          <li class="header_container-nav-list-item me-3">Nav2</li>
+          <li class="header_container-nav-list-item me-3">
+            <select
+              name="nav3"
+              id="nav3"
+              class="header_container-nav-list-item-select"
+            >
+              <option value="">Nav3</option>
+              <option value="">Option</option>
+              <option value="">Option</option>
+              <option value="">Option</option>
+              <option value="">Option</option>
+            </select>
+          </li>
+          <li class="header_container-nav-list-item me-3">
+            <select
+              name="nav3"
+              id="nav3"
+              class="header_container-nav-list-item-select"
+            >
+              <option value="">Nav4</option>
+              <option value="">Option</option>
+              <option value="">Option</option>
+              <option value="">Option</option>
+              <option value="">Option</option>
+            </select>
+          </li>
+          <li class="header_container-nav-list-item me-3">Nav5</li>
+          <li class="header_container-nav-list-item me-3">Nav6</li>
+          <li class="header_container-nav-list-item me-3">Nav7</li>
+          <li class="header_container-nav-list-item">Nav8</li>
+        </ul>
       </div>
     </header>
-    <main class="main"></main>
-    <footer class="footer"></footer>
+    <main class="main">
+      <section
+        class="artboard d-flex justify-content-center align-items-center gap-5"
+      >
+        <div class="artboard-info">
+          <div class="artboard-info-heading">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+          <div class="artboard-info-para mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+            commodo est.Pellentesque eu placerat mauris. Etiam ut maximus ante.
+            Suspendisse varius dolor nec bibendum dignissim. Proin in diam a
+            justo sollicitudin mattis eu sagittis nunc. In hac habitasse platea
+            dictumst.
+          </div>
+          <div class="artboard-info-btn primary-btn">Check Pricing</div>
+        </div>
+        <div class="artboard-image">
+          <img
+            src="./images/img-1.png"
+            alt="artboard image"
+            class="artboard-image-img"
+          />
+        </div>
+      </section>
+      <section class="cards-section">
+        <div class="cards-section_heading thirsary-heading">
+          Lorem ipsum dolor sit amet,consectetur adipiscing elit.
+        </div>
+        <div
+          class="cards-section_cards d-flex justify-content-center align-items-center gap-5"
+        >
+          <div class="cards-section_cards-card">
+            <div class="cards-section_cards-card-heading">
+              Lorem ipsum dolor sit .
+            </div>
+            <div class="cards-section_cards-card-info">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+              commodo est.Pellentesque eu placerat mauris. Etiam ut maximus
+              ante. Suspendisse varius dolor nec bibendum dignissim. Proin in
+              diam a justo sollicitudin mattis eu sagittisnunc. In hac
+              habitasse.
+            </div>
+          </div>
+          <div class="cards-section_cards-card">
+            <div class="cards-section_cards-card-heading">
+              Lorem ipsum dolor sit .
+            </div>
+            <div class="cards-section_cards-card-info">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+              commodo est.Pellentesque eu placerat mauris. Etiam ut maximus
+              ante. Suspendisse varius dolor nec bibendum dignissim. Proin in
+              diam a justo sollicitudin mattis eu sagittisnunc. In hac
+              habitasse.
+            </div>
+          </div>
+          <div class="cards-section_cards-card">
+            <div class="cards-section_cards-card-heading">
+              Lorem ipsum dolor sit .
+            </div>
+            <div class="cards-section_cards-card-info">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+              commodo est.Pellentesque eu placerat mauris. Etiam ut maximus
+              ante. Suspendisse varius dolor nec bibendum dignissim. Proin in
+              diam a justo sollicitudin mattis eu sagittisnunc. In hac
+              habitasse.
+            </div>
+          </div>
+        </div>
+        <div class="cards-section_heading thirsary-heading">
+          Lorem ipsum dolor sit amet,consectetur adipiscing elit.
+        </div>
+      </section>
+      <!--  -->
+      <section
+        class="images-card-section d-flex justify-content-center gap-5 align-items-center"
+      >
+        <div class="images-card-section-card">
+          <img
+            src="./images/card-img 1.png"
+            alt="card img"
+            class="images-card-section-card-img"
+          />
+          <div class="images-card-section-card-heading">
+            Lorem ipsum dolor sit .
+          </div>
+          <div class="images-card-section-card-info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+            commodo est. Pellentesque eu placerat mauris. Etiam ut maximus ante.
+            Suspendisse varius dolor nec bibendum dignissim. Proin in diam a
+            justo sollicitudin mattis eu sagittis nunc. In hac habitasse platea
+            dictumst.
+          </div>
+        </div>
+        <div class="images-card-section-card">
+          <img
+            src="./images/card-img 2.png"
+            alt="card img"
+            class="images-card-section-card-img"
+          />
+          <div class="images-card-section-card-heading">
+            Lorem ipsum dolor sit .
+          </div>
+          <div class="images-card-section-card-info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+            commodo est. Pellentesque eu placerat mauris. Etiam ut maximus ante.
+            Suspendisse varius dolor nec bibendum dignissim. Proin in diam a
+            justo sollicitudin mattis eu sagittis nunc. In hac habitasse platea
+            dictumst.
+          </div>
+        </div>
+        <div class="images-card-section-card">
+          <img
+            src="./images/card-img 3.png"
+            alt="card img"
+            class="images-card-section-card-img"
+          />
+          <div class="images-card-section-card-heading">
+            Lorem ipsum dolor sit .
+          </div>
+          <div class="images-card-section-card-info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+            commodo est. Pellentesque eu placerat mauris. Etiam ut maximus ante.
+            Suspendisse varius dolor nec bibendum dignissim. Proin in diam a
+            justo sollicitudin mattis eu sagittis nunc. In hac habitasse platea
+            dictumst.
+          </div>
+        </div>
+      </section>
+      <div class="thirsary-heading common-margin">
+        Lorem ipsum dolor sit amet,consectetur adipiscing elit.
+      </div>
+      <section class="zigzag-card_container">
+        <div class="zigzag-card_container-left-card d-flex flex-column gap-4">
+          <div class="zigzag-card_container-left-card-header">
+            <img
+              src="./images/save-money.png"
+              alt="logo"
+              class="zigzag-card_container-left-card-header-img"
+            />
+            <span class="zigzag-card_container-left-card-header-text"
+              >Lorem ipsum dolor sit .</span
+            >
+          </div>
+          <div class="zigzag-card_container-left-card-info">
+            adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris.
+            ut maximus ante. Suspendisse varius dolor nec bibendum dignissim
+          </div>
+          <div class="zigzag-card_container-left-card-btn primary-btn">
+            Check Pricing
+          </div>
+        </div>
+        <div
+          class="zigzag-card_container-right-card d-flex justify-content-between flex-column gap-4"
+        >
+          <div class="zigzag-card_container-right-card-header">
+            <img
+              src="./images/accurancy.png"
+              alt="logo"
+              class="zigzag-card_container-right-card-header-img"
+            />
+            <span class="zigzag-card_container-right-card-header-text"
+              >Lorem ipsum dolor sit .</span
+            >
+          </div>
+          <div class="zigzag-card_container-right-card-info">
+            adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris.
+            ut maximus ante. Suspendisse varius dolor nec bibendum dignissim
+          </div>
+          <div class="zigzag-card_container-right-card-btn primary-btn">
+            Check Pricing
+          </div>
+        </div>
+        <div class="zigzag-card_container-left-card d-flex flex-column gap-4">
+          <div class="zigzag-card_container-left-card-header">
+            <img
+              src="./images/hirring.png"
+              alt="logo"
+              class="zigzag-card_container-left-card-header-img"
+            />
+            <span class="zigzag-card_container-left-card-header-text"
+              >Lorem ipsum dolor sit .</span
+            >
+          </div>
+          <div class="zigzag-card_container-left-card-info">
+            adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris.
+            ut maximus ante. Suspendisse varius dolor nec bibendum dignissim
+          </div>
+          <div class="zigzag-card_container-left-card-btn primary-btn">
+            Check Pricing
+          </div>
+        </div>
+        <div
+          class="zigzag-card_container-right-card d-flex justify-content-between flex-column gap-4"
+        >
+          <div class="zigzag-card_container-right-card-header">
+            <img
+              src="./images/money-back.png"
+              alt="logo"
+              class="zigzag-card_container-right-card-header-img"
+            />
+            <span class="zigzag-card_container-right-card-header-text"
+              >Lorem ipsum dolor sit .</span
+            >
+          </div>
+          <div class="zigzag-card_container-right-card-info">
+            adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris.
+            ut maximus ante. Suspendisse varius dolor nec bibendum dignissim
+          </div>
+          <div class="zigzag-card_container-right-card-btn primary-btn">
+            Check Pricing
+          </div>
+        </div>
+      </section>
+      <div class="lorem-heading">Lorem ipsum dolor sit .</div>
+
+      <section class="lorem-slider">
+        <div class="lorem-slider-next-btn">></div>
+        <div class="lorem-slider-header d-flex align-items-center gap-4">
+          <img
+            src="./images/xd-img.png"
+            alt="img"
+            class="lorem-slider-header-img"
+          />
+          <div class="lorem-slider-header-heading">Lorem ipsum dolor sit .</div>
+        </div>
+        <div
+          class="lorem-slider-cards d-flex align-items-center gap-5 justify-content-center"
+        >
+          <div class="lorem-slider-cards-card">
+            <div
+              class="lorem-slider-cards-card-header d-flex align-items-start gap-2"
+            >
+              <img
+                src="./images/person-01.png"
+                alt="img"
+                class="lorem-slider-cards-card-header-img"
+              />
+              <div
+                class="lorem-slider-cards-card-header-info d-flex flex-column gap-2"
+              >
+                <div class="lorem-slider-cards-card-header-info-name">
+                  Jhon Doe
+                </div>
+                <div class="lorem-slider-cards-card-header-info-designation">
+                  Jhon Doe
+                </div>
+              </div>
+              <div
+                class="lorem-slider-cards-card-header-rating d-flex align-items-center gap-1"
+              >
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+              </div>
+            </div>
+            <div class="lorem-slider-cards-card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+              commodo est. Pellentesque eu placerat mauris. Etiam ut maximus
+              ante. Suspendisse varius dolor nec bibendum dignissim. Proin in
+              diam a justo sollicitudin mattis eu sagittis nunc. In hac
+              habitasse platea dictumst.
+            </div>
+          </div>
+          <div class="lorem-slider-cards-card">
+            <div
+              class="lorem-slider-cards-card-header d-flex align-items-start gap-2"
+            >
+              <img
+                src="./images/person-2.png"
+                alt="img"
+                class="lorem-slider-cards-card-header-img"
+              />
+              <div
+                class="lorem-slider-cards-card-header-info d-flex flex-column gap-2"
+              >
+                <div class="lorem-slider-cards-card-header-info-name">
+                  Jhon Doe
+                </div>
+                <div class="lorem-slider-cards-card-header-info-designation">
+                  Jhon Doe
+                </div>
+              </div>
+              <div
+                class="lorem-slider-cards-card-header-rating d-flex align-items-center gap-1"
+              >
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+              </div>
+            </div>
+            <div class="lorem-slider-cards-card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+              commodo est. Pellentesque eu placerat mauris. Etiam ut maximus
+              ante. Suspendisse varius dolor nec bibendum dignissim. Proin in
+              diam a justo sollicitudin mattis eu sagittis nunc. In hac
+              habitasse platea dictumst.
+            </div>
+          </div>
+          <div class="lorem-slider-cards-card">
+            <div
+              class="lorem-slider-cards-card-header d-flex align-items-start gap-2"
+            >
+              <img
+                src="./images/person3.png"
+                alt="img"
+                class="lorem-slider-cards-card-header-img"
+              />
+              <div
+                class="lorem-slider-cards-card-header-info d-flex flex-column gap-2"
+              >
+                <div class="lorem-slider-cards-card-header-info-name">
+                  Jhon Doe
+                </div>
+                <div class="lorem-slider-cards-card-header-info-designation">
+                  Jhon Doe
+                </div>
+              </div>
+              <div
+                class="lorem-slider-cards-card-header-rating d-flex align-items-center gap-1"
+              >
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+                <img
+                  src="./images/rating.png"
+                  alt="rating"
+                  class="lorem-slider-cards-card-header-rating-rate"
+                />
+              </div>
+            </div>
+            <div class="lorem-slider-cards-card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+              commodo est. Pellentesque eu placerat mauris. Etiam ut maximus
+              ante. Suspendisse varius dolor nec bibendum dignissim. Proin in
+              diam a justo sollicitudin mattis eu sagittis nunc. In hac
+              habitasse platea dictumst.
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="lorem-heading padding">
+        Lorem ipsum dolor sit amet,consectetur adipiscing elit.
+      </div>
+      <div class="banner d-flex align-items-center justify-content-center">
+        <div class="banner-cards">
+          <img
+            src="./images/banner-img 11.png"
+            alt="banner img"
+            class="banner-cards-img"
+          />
+          <div class="banner-cards-heading">Forms On Fire</div>
+        </div>
+        <div class="banner-cards">
+          <img
+            src="./images/banner-img 2.png"
+            alt="banner img"
+            class="banner-cards-img"
+          />
+          <div class="banner-cards-heading">ElectroNeek Studio IDE</div>
+        </div>
+        <div class="banner-cards">
+          <img
+            src="./images/banner-img 3.png"
+            alt="banner img"
+            class="banner-cards-img"
+          />
+          <div class="banner-cards-heading">Jot form</div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer bg-dark text-white text-center">
+      &copy; Helplama 2021
+    </footer>
   </body>
 </html>

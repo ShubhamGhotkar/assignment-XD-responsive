@@ -1,0 +1,284 @@
+@import "./variable";
+@import "./classes";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.header {
+  max-width: $totalWidth;
+  background: $nav-background;
+  font-size: 1.9rem;
+  border-bottom: 0.3rem solid $header-primary-border;
+  padding: 3rem 0 1rem 0;
+
+  &_container {
+    width: inherit;
+
+    &-logo {
+      height: 4.7rem;
+      width: 16.3rem;
+      border: 1px solid gray;
+
+      display: grid;
+      place-items: center;
+    }
+    &-nav-list {
+      &-item {
+        &-select {
+          width: 85%;
+          outline: none;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.artboard {
+  &-info {
+    flex: 0 0 40%;
+
+    &-heading {
+      font-size: 4rem;
+      text-align: left;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+    &-para {
+      font-size: 1.8rem;
+      text-align: left;
+      padding-right: 6.5rem;
+    }
+    &-btn {
+      margin-top: 3rem;
+    }
+  }
+  &-image {
+    flex: 0 0 30%;
+  }
+}
+.footer {
+  padding: 32.5rem 0 4.5rem 0;
+  font-size: 1.8rem;
+}
+
+.cards-section {
+  background: #f8fafc 0% 0% no-repeat padding-box;
+  &_heading {
+    padding: 18rem 0 8rem 0;
+  }
+  &_cards {
+    &-card {
+      width: 30.8rem;
+      height: 32rem;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 18px;
+      padding: 3.8rem 1rem;
+      margin-top: 5rem;
+
+      &-heading {
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: bold;
+      }
+      &-info {
+        margin-top: 1.8rem;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.images-card-section {
+  &-card {
+    width: 328px;
+    height: 168px;
+    &-img {
+      width: 241px;
+      height: 157px;
+    }
+    &-heading {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    &-info {
+      font-size: 1.8rem;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.primary-btn {
+  width: 24.7rem;
+  height: 6.5rem;
+  color: #fff;
+  background-color: #1492e6;
+  font-size: 2.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10rem;
+  display: grid;
+  place-items: center;
+}
+
+.thirsary-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.common-margin {
+  padding: 35rem 0 10rem 0;
+}
+
+.zigzag-card_container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  &-left-card,
+  &-right-card {
+    width: 64.4rem;
+    align-self: flex-start;
+
+    &-header {
+      &-img {
+        height: 7rem;
+        width: 7rem;
+      }
+      &-text {
+        font-size: 2.4rem;
+        font-weight: bold;
+      }
+    }
+    &-info {
+      font-size: 2.1rem;
+      font-weight: normal;
+    }
+    &-btn {
+    }
+  }
+  &-right-card {
+    width: 47.1rem;
+    align-self: flex-end;
+  }
+}
+.lorem-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 15rem 0 6rem 0;
+}
+
+.lorem-slider {
+  width: 109.7rem;
+  height: 36.3rem;
+  margin: 0 auto;
+  background: #f8fafc 0% 0% no-repeat padding-box;
+  box-shadow: 0px 16px 48px #00000029;
+  border-radius: 42px;
+  padding: 4.5rem;
+
+  position: relative;
+  &-header {
+    &-img {
+      width: 6.3rem;
+      height: 6.3rem;
+    }
+    &-heading {
+      font-size: 2.5rem;
+      font-weight: 900;
+    }
+  }
+  &-next-btn {
+    height: 6.3rem;
+    width: 6.3rem;
+    box-shadow: 0px 7px 17px #00000029;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 7rem;
+    right: 0;
+    transform: translateX(50%);
+
+    display: grid;
+    place-items: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #707070;
+  }
+  &-cards {
+    transform: translateY(15%);
+    &-card {
+      width: 28.5rem;
+      height: 26.3rem;
+      background: white;
+      box-shadow: 0px 16px 48px #00000029;
+      border-radius: 3rem;
+      padding: 3rem;
+      &-header {
+        &-img {
+          height: 4.3rem;
+          width: 4.3rem;
+          border-radius: 50%;
+        }
+        &-info,
+        &-designation {
+          &-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0;
+          }
+          &-designation {
+            color: #615c5c;
+          }
+        }
+
+        &-rating {
+          margin-left: auto;
+          &-rate {
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+        }
+      }
+      &-text {
+        font-size: 1.3rem;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
+.padding {
+  padding: 30rem 0 0 0;
+}
+
+.banner {
+  padding: 13rem 0;
+  gap: 15rem;
+  &-cards {
+    width: 200px;
+    &-img {
+      width: 185px;
+      height: 58px;
+    }
+    &-heading {
+      font-size: 1.8rem;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 0;
+    }
+  }
+}
