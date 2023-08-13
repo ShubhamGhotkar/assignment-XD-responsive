@@ -1,0 +1,35 @@
+/* common.css */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.padding-top {
+  padding-top: var(--spacing);
+}
+
+.padding-bottom {
+  padding-bottom: var(--spacing);
+}
+
+.padding-horizontal {
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+}
+
+.padding-vertical {
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
+}
+
+/* ... other common classes ... */
