@@ -16,15 +16,18 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>HTML Test</title>
   </head>
   <body>
     <header class="header">
       <div
-        class="header_container d-flex justify-content-between align-items-center flex-column gap-5"
+        class="header_container d-flex justify-content-between align-items-center gap-5"
       >
         <img src="./images/logo.png" alt="logo" class="header_container-logo" />
-        <ul class="header_container-nav-list d-flex list-unstyled gap-5">
+        <ul
+          class="header_container-nav-list d-flex list-unstyled gap-5"
+          id="nav-list"
+        >
           <li class="header_container-nav-list-item me-3">Nav1</li>
           <li class="header_container-nav-list-item me-3">Nav2</li>
           <li class="header_container-nav-list-item me-3">
@@ -58,6 +61,64 @@
           <li class="header_container-nav-list-item me-3">Nav7</li>
           <li class="header_container-nav-list-item">Nav8</li>
         </ul>
+        <!-- Responsive Button -->
+        <div class="header_container-responsive-container">
+          <div
+            class="header_container-responsive-container-btn"
+            id="responsive-btn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+          <ul
+            class="header_container-responsive-container-nav-list hidden"
+            id="res-nav-bar"
+          >
+            <li class="header_container-nav-list-item me-3">Nav1</li>
+            <li class="header_container-nav-list-item me-3">Nav2</li>
+            <li class="header_container-nav-list-item me-3">
+              <select
+                name="nav3"
+                id="nav3"
+                class="header_container-nav-list-item-select"
+              >
+                <option value="">Nav3</option>
+                <option value="">Option</option>
+                <option value="">Option</option>
+                <option value="">Option</option>
+                <option value="">Option</option>
+              </select>
+            </li>
+            <li class="header_container-nav-list-item me-3">
+              <select
+                name="nav3"
+                id="nav3"
+                class="header_container-nav-list-item-select"
+              >
+                <option value="">Nav4</option>
+                <option value="">Option</option>
+                <option value="">Option</option>
+                <option value="">Option</option>
+                <option value="">Option</option>
+              </select>
+            </li>
+            <li class="header_container-nav-list-item me-3">Nav5</li>
+            <li class="header_container-nav-list-item me-3">Nav6</li>
+            <li class="header_container-nav-list-item me-3">Nav7</li>
+            <li class="header_container-nav-list-item">Nav8</li>
+          </ul>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -85,6 +146,12 @@
             class="artboard-image-img"
           />
         </div>
+
+        <img
+          src="./images/wave upper.svg"
+          alt="cover img"
+          class="artboard-cover"
+        />
       </section>
       <section class="cards-section">
         <h2 class="cards-section_upper-heading secondary-heading">
@@ -143,7 +210,7 @@
             src="./images/card-img 1.png"
             alt="card img"
             class="images-card-section-card-img"
-          />
+          /><br />
           <h4 class="images-card-section-card-heading card-header">
             Lorem ipsum dolor sit .
           </h4>
@@ -177,7 +244,7 @@
             src="./images/card-img 3.png"
             alt="card img"
             class="images-card-section-card-img"
-          />
+          /><br />
           <h4 class="images-card-section-card-heading card-header">
             Lorem ipsum dolor sit .
           </h4>
@@ -491,5 +558,7 @@
     <footer class="footer bg-dark text-white text-center">
       &copy; Helplama 2021
     </footer>
+
+    <script src="./index.js"></script>
   </body>
 </html>

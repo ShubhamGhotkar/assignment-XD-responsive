@@ -1,3 +1,4 @@
+/* Global Styles */
 @import "./variable";
 @import "./classes";
 
@@ -12,47 +13,106 @@ html {
   font-family: "Nunito Sans", sans-serif;
   letter-spacing: 0;
 }
+body {
+  overflow-x: hidden;
+  padding: 0 1rem;
+}
 
+/* Header Section */
 .header {
   max-width: $totalWidth;
   background: $nav-background;
   font-size: 1.9rem;
   border-bottom: 0.3rem solid $header-primary-border;
   padding: 3.3rem 0 1rem 0;
+  position: relative;
 
   &_container {
     width: inherit;
-
+    flex-direction: column;
     &-logo {
       height: 4.8rem;
       width: 16.4rem;
+      margin-left: 3rem;
     }
+
     &-nav-list {
       &-item {
         font-size: 1.9rem;
         font-weight: 600;
+
         &-select {
           font-size: 1.9rem;
           font-weight: 600;
           outline: none;
           border: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-responsive-container {
+      height: auto;
+
+      background: $primary-white;
+
+      display: none;
+
+      box-shadow: 0 0.3rem 0.6rem $primary-shadow;
+      &-btn svg {
+        height: 4.1rem;
+        width: 5.1rem;
+        cursor: pointer;
+        align-self: baseline;
+        border-radius: 1.2rem;
+      }
+      &-nav-list {
+        width: 100vw;
+        width: 100%;
+        background: $primary-white;
+        height: max-content;
+        list-style: none;
+        position: absolute;
+        top: 4.5vh;
+        left: 0;
+        z-index: 9999;
+        cursor: pointer;
+        box-shadow: 0rem 0.3rem 0.6rem $primary-shadow;
+
+        & li {
+          width: 100%;
+          padding: 1rem;
+          margin: 0.5rem 0;
+          text-align: center;
+
+          &:nth-child(3),
+          &:nth-child(4) {
+            margin-left: 1.4rem;
+          }
+
+          &:hover {
+            background-color: $primary-background;
+          }
         }
       }
     }
   }
 }
 
+/* Artboard Section */
 .artboard {
   width: 100%;
   height: auto;
-  &::after {
-    content: url("../images/wave\ upper.svg");
+  position: relative;
+  overflow: hidden;
+
+  &-cover {
     width: 100%;
-    height: 29%;
     position: absolute;
-    bottom: 6.5rem;
+    bottom: -10rem;
     left: 0;
   }
+
   &-info {
     flex: 0 0 40%;
     height: max-content;
@@ -63,50 +123,55 @@ html {
       font-weight: 900;
       line-height: 1.3;
     }
+
     &-para {
       font-size: 1.8rem;
       text-align: left;
       padding-right: 6.5rem;
       font-weight: normal;
     }
+
     &-btn {
       margin-top: 6rem;
     }
   }
+
   &-image {
     flex: 0 0 30%;
   }
 }
 
+/* Cards Section */
 .cards-section {
   width: 100%;
   height: max-content;
-  // position: relative;
-  // z-index: 999;
-
-  background: #f8fafc;
+  background: $secondary-background;
 
   &_upper-heading {
     padding-top: 17rem;
   }
+
   &_lower-headings {
     padding-top: 20rem;
   }
+
   &_cards {
     width: 100%;
     gap: 5rem;
+
     &-card {
       width: 30.8rem;
       height: 32rem;
-      background: #ffffff;
-      box-shadow: 0px 3px 6px #00000029;
-      border-radius: 18px;
+      background: $primary-white;
+      box-shadow: 0 0.3rem 0.6rem $primary-shadow;
+      border-radius: 1.8rem;
       padding: 3.8rem 1rem;
       margin-top: 7rem;
 
       &-heading {
-        background: white;
+        background: $primary-white;
       }
+
       &-info {
         margin-top: 1.8rem;
       }
@@ -114,6 +179,7 @@ html {
   }
 }
 
+/* Images Card Section */
 .images-card-section {
   width: 100%;
   height: auto;
@@ -127,25 +193,29 @@ html {
     height: 16.8rem;
     margin-top: 20rem;
     padding: 0 0.2rem;
+
     &-img {
       width: 18.5rem;
       height: 17.1rem;
     }
+
     &-heading {
       text-align: start !important;
       padding: 2rem 0 !important;
     }
+
     &-info {
       text-align: start !important;
     }
   }
 }
 
+/* Primary Button */
 .primary-btn {
   width: 24.7rem;
   height: 6.5rem;
-  color: #fff;
-  background-color: #1492e6;
+  color: $primary-white;
+  background-color: $primary-sky;
   font-size: 2.3rem;
   font-weight: 600;
   cursor: pointer;
@@ -156,109 +226,112 @@ html {
   z-index: 999;
 }
 
-.thirsary-heading {
-  font-size: 3.5rem;
-  font-weight: bold;
-  text-align: center;
-}
-.common-margin {
-  padding: 35rem 0 10rem 0;
-}
-
+/* Zigzag Card Container */
 .zigzag-card_container {
   width: 70%;
   height: auto;
   margin: 0 auto;
   gap: 3rem;
+
   &-heading {
     padding: 45rem 0 10rem 0;
   }
+
   &-left-card,
   &-right-card {
     width: 64.4rem;
     align-self: flex-start;
     gap: 2.3rem;
+
     &-header {
       &-img {
         height: 7rem;
         width: 7rem;
       }
+
       &-text {
         font-size: 2.4rem;
         font-weight: bold;
       }
     }
+
     &-info {
       font-size: 2.1rem;
       font-weight: normal;
     }
-    &-btn {
-    }
   }
+
   &-right-card {
     width: 47.1rem;
     align-self: flex-end;
   }
 }
+
+/* Lorem Heading */
 .lorem-heading {
   padding: 15rem 0 6rem 0;
 }
 
+/* Lorem Slider */
 .lorem-slider {
   width: 109.7rem;
   height: 36.3rem;
   margin: 0 auto;
-  background: #f8fafc;
-  box-shadow: 0px 16px 48px #00000029;
-  border-radius: 42px;
+  background: $thirsary-background;
+  box-shadow: 0rem 1.6rem 4.8rem #00000029;
+  border-radius: 4.2rem;
   padding: 4.5rem;
-
   position: relative;
+
   &-header {
     &-img {
       width: 6.3rem;
       height: 6.3rem;
     }
+
     &-heading {
       font-size: 2.5rem;
       font-weight: 900;
     }
   }
+
   &-next-btn {
     height: 6.3rem;
     width: 6.3rem;
-    box-shadow: 0px 7px 17px #00000029;
+    box-shadow: 0rem 0.7rem 1.7rem $primary-shadow;
     border-radius: 50%;
-    background: white;
+    background: $primary-whitewhite;
     cursor: pointer;
-
     position: absolute;
     bottom: 7rem;
     right: 0;
     transform: translateX(50%);
-
     display: grid;
     place-items: center;
     font-size: 2.5rem;
     font-weight: 900;
-    color: #707070;
+    color: $primary-text-color;
   }
+
   &-cards {
     transform: translateY(15%);
+
     &-card {
       position: relative;
       width: 28.5rem;
       height: 26.3rem;
-      background: white;
-      box-shadow: 0px 16px 48px #00000029;
+      background: $primary-white;
+      box-shadow: 0rem 1.6rem 4.8rem $primary-shadow;
       border-radius: 3rem;
       padding: 3rem;
+
       &-header {
         &-img {
           height: 4.3rem;
           width: 4.3rem;
           border-radius: 50%;
         }
+
         &-info,
         &-designation {
           &-name {
@@ -266,6 +339,7 @@ html {
             font-weight: 600;
             letter-spacing: 0;
           }
+
           &-designation {
             width: fit-content;
             height: auto;
@@ -274,18 +348,20 @@ html {
             left: 8rem;
             font-size: 1.2rem;
             font-weight: 600;
-            color: #615c5c;
+            color: $secondary-text-color;
           }
         }
 
         &-rating {
           margin-left: auto;
+
           &-rate {
             height: 1.5rem;
             width: 1.5rem;
           }
         }
       }
+
       &-text {
         font-size: 1.3rem;
         letter-spacing: 0;
@@ -294,10 +370,7 @@ html {
   }
 }
 
-.padding {
-  padding: 30rem 0 0 0;
-}
-
+/* Banner Section */
 .banner {
   padding: 13rem 0;
   gap: 15rem;
@@ -305,14 +378,18 @@ html {
   &-heading {
     padding: 20rem 0 15rem 0;
   }
+
   &-container {
     padding-bottom: 5rem;
+    gap: 15rem;
     &-cards {
-      width: 200px;
+      width: 20rem;
+
       &-img {
-        width: 185px;
-        height: 58px;
+        width: 18.5rem;
+        height: 5.8rem;
       }
+
       &-heading {
         font-size: 1.8rem;
         text-align: center;
@@ -322,27 +399,297 @@ html {
     }
   }
 }
+
+/* Footer Section */
 .footer {
   padding: 32.5rem 0 4.5rem 0;
   font-size: 1.8rem;
-  border: 0.1rem solid #707070;
+  border: 0.1rem solid $primary-text-color;
 }
 
-// CSS
-
+/* Miscellaneous */
 .secondary-heading {
   font-size: 3.5rem;
   font-weight: bold;
   text-align: center;
 }
+
 .card-header {
   font-size: 1.8rem;
   text-align: center;
   font-weight: bold;
-  background-color: white !important;
+  background-color: $primary-white !important;
   border-bottom: none !important;
 }
+
 .paragraph {
   font-size: 1.8rem;
   font-weight: normal;
+}
+
+.hidden {
+  display: none;
+}
+
+// media query
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 1255px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 1115px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media screen and (max-width: 980px) {
+  html {
+    font-size: 6px;
+  }
+  .header {
+    & #nav-list {
+      display: none !important;
+    }
+    &_container {
+      flex-direction: row;
+      &-logo {
+        margin-left: 5%;
+      }
+
+      &-responsive-container {
+        display: block;
+        margin-right: 5%;
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (max-width: 790px) {
+  html {
+    font-size: 8px;
+  }
+  .artboard {
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 5rem;
+    &-cover {
+      bottom: -6rem;
+    }
+
+    &-info {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2rem 2rem;
+
+      &-heading {
+        text-align: center;
+        padding-top: 2rem;
+      }
+
+      &-para {
+        text-align: center;
+      }
+
+      &-btn {
+        margin-left: 30%;
+      }
+    }
+
+    &-image {
+      flex: 0 0 60%;
+      box-shadow: 0rem 0rem 0.2rem #00000029;
+    }
+  }
+  .cards-section {
+    &_cards {
+      width: 100%;
+      gap: 5rem;
+      flex-direction: column;
+      &-card {
+        width: 60%;
+        padding: 1rem;
+        &-heading {
+          text-align: center;
+        }
+
+        &-info {
+          text-align: center;
+          line-height: 2;
+        }
+      }
+    }
+  }
+  /* Images Card Section */
+  .images-card-section {
+    flex-direction: column;
+    gap: 10rem;
+    &-card {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  /* Zigzag Card Container */
+  .zigzag-card_container {
+    gap: 10rem;
+
+    &-heading {
+      padding: 45rem 0 10rem 0;
+    }
+
+    &-left-card,
+    &-right-card {
+      margin-left: 10%;
+      align-self: flex-start;
+
+      &-header {
+        margin-left: 20%;
+        &-text {
+          text-align: center;
+        }
+      }
+
+      &-info {
+        text-align: center;
+      }
+
+      &-btn {
+        margin-left: 25%;
+      }
+    }
+    &-right-card {
+      margin-left: 15%;
+    }
+  }
+  .lorem-slider {
+    display: none !important;
+  }
+  .lorem-heading {
+    display: none;
+  }
+
+  .banner {
+    &-heading {
+      padding: 20rem 0 15rem 0;
+    }
+
+    &-container {
+      flex-direction: column;
+      padding-bottom: 5rem;
+      gap: 15rem;
+      &-cards {
+        &-heading {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+  .header_container-responsive-container-nav-list {
+    top: 5.5vh;
+  }
+}
+// Mobile
+@media screen and (max-width: 390px) {
+  html {
+    font-size: 6px;
+  }
+  .artboard {
+    &-cover {
+      bottom: 0rem;
+    }
+
+    &-info {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2rem 2rem;
+
+      &-heading {
+        font-size: 2.4rem;
+      }
+
+      &-para {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .cards-section {
+    &_cards {
+      gap: 1rem;
+
+      &-card {
+        width: 60%;
+        padding: 0 1.4rem;
+
+        &-info {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  /* Images Card Section */
+  .images-card-section {
+    gap: 6rem;
+  }
+  /* Zigzag Card Container */
+  .zigzag-card_container {
+    gap: 10rem;
+
+    &-heading {
+      padding: 25rem 0 0 0;
+      font-size: 2.4rem;
+    }
+
+    &-left-card,
+    &-right-card {
+      width: 100%;
+      margin-left: 5%;
+
+      &-header {
+        margin-left: 10%;
+      }
+
+      &-info {
+        font-size: 1.6rem;
+      }
+
+      &-btn {
+        margin-left: 25%;
+      }
+    }
+    &-right-card {
+      margin-left: 5%;
+    }
+  }
+  .banner {
+    &-heading {
+      padding: 10rem 3rem 5rem 3rem;
+      font-size: 2.4rem;
+    }
+
+    &-container {
+      flex-direction: column;
+      padding-bottom: 3rem;
+      gap: 10rem;
+      &-cards {
+        &-heading {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+  .header_container-responsive-container-nav-list {
+    top: 9.5rem;
+  }
 }
