@@ -26,16 +26,11 @@ html {
     &-logo {
       height: 4.8rem;
       width: 16.4rem;
-      border: 1px solid #707070;
-
-      display: grid;
-      place-items: center;
     }
     &-nav-list {
       &-item {
         font-size: 1.9rem;
         font-weight: 600;
-        // background-color: yellow;
         &-select {
           font-size: 1.9rem;
           font-weight: 600;
@@ -48,8 +43,19 @@ html {
 }
 
 .artboard {
+  width: 100%;
+  height: auto;
+  &::after {
+    content: url("../images/wave\ upper.svg");
+    width: 100%;
+    height: 29%;
+    position: absolute;
+    bottom: 6.5rem;
+    left: 0;
+  }
   &-info {
     flex: 0 0 40%;
+    height: max-content;
 
     &-heading {
       font-size: 4rem;
@@ -64,7 +70,7 @@ html {
       font-weight: normal;
     }
     &-btn {
-      margin-top: 3rem;
+      margin-top: 6rem;
     }
   }
   &-image {
@@ -73,51 +79,64 @@ html {
 }
 
 .cards-section {
-  width: inherit;
-  background: #f8fafc 0% 0% no-repeat padding-box;
-  &_heading {
-    padding: 18rem 0 8rem 0;
+  width: 100%;
+  height: max-content;
+  // position: relative;
+  // z-index: 999;
+
+  background: #f8fafc;
+
+  &_upper-heading {
+    padding-top: 17rem;
+  }
+  &_lower-headings {
+    padding-top: 20rem;
   }
   &_cards {
+    width: 100%;
+    gap: 5rem;
     &-card {
       width: 30.8rem;
       height: 32rem;
-      background: #ffffff 0% 0% no-repeat padding-box;
+      background: #ffffff;
       box-shadow: 0px 3px 6px #00000029;
       border-radius: 18px;
       padding: 3.8rem 1rem;
-      margin-top: 5rem;
+      margin-top: 7rem;
 
       &-heading {
-        // font-size: 1.8rem;
-        // text-align: center;
-        // font-weight: bold;
         background: white;
       }
       &-info {
         margin-top: 1.8rem;
-        // font-size: 1.8rem;
-        // text-align: center;
       }
     }
   }
 }
 
 .images-card-section {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/wave\ lower.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 6rem;
+
   &-card {
-    width: 328px;
-    height: 168px;
+    width: 32.8rem;
+    height: 16.8rem;
+    margin-top: 20rem;
+    padding: 0 0.2rem;
     &-img {
-      width: 241px;
-      height: 157px;
+      width: 18.5rem;
+      height: 17.1rem;
     }
     &-heading {
-      // font-size: 1.8rem;
-      // font-weight: bold;
+      text-align: start !important;
+      padding: 2rem 0 !important;
     }
     &-info {
-      // font-size: 1.8rem;
-      // letter-spacing: 0;
+      text-align: start !important;
     }
   }
 }
@@ -133,6 +152,8 @@ html {
   border-radius: 10rem;
   display: grid;
   place-items: center;
+  position: relative;
+  z-index: 999;
 }
 
 .thirsary-heading {
@@ -146,14 +167,17 @@ html {
 
 .zigzag-card_container {
   width: 70%;
+  height: auto;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  gap: 3rem;
+  &-heading {
+    padding: 45rem 0 10rem 0;
+  }
   &-left-card,
   &-right-card {
     width: 64.4rem;
     align-self: flex-start;
-
+    gap: 2.3rem;
     &-header {
       &-img {
         height: 7rem;
@@ -177,9 +201,6 @@ html {
   }
 }
 .lorem-heading {
-  font-size: 3.5rem;
-  font-weight: bold;
-  text-align: center;
   padding: 15rem 0 6rem 0;
 }
 
@@ -187,7 +208,7 @@ html {
   width: 109.7rem;
   height: 36.3rem;
   margin: 0 auto;
-  background: #f8fafc 0% 0% no-repeat padding-box;
+  background: #f8fafc;
   box-shadow: 0px 16px 48px #00000029;
   border-radius: 42px;
   padding: 4.5rem;
@@ -225,6 +246,7 @@ html {
   &-cards {
     transform: translateY(15%);
     &-card {
+      position: relative;
       width: 28.5rem;
       height: 26.3rem;
       background: white;
@@ -245,6 +267,13 @@ html {
             letter-spacing: 0;
           }
           &-designation {
+            width: fit-content;
+            height: auto;
+            position: absolute;
+            top: 5rem;
+            left: 8rem;
+            font-size: 1.2rem;
+            font-weight: 600;
             color: #615c5c;
           }
         }
@@ -272,23 +301,31 @@ html {
 .banner {
   padding: 13rem 0;
   gap: 15rem;
-  &-cards {
-    width: 200px;
-    &-img {
-      width: 185px;
-      height: 58px;
-    }
-    &-heading {
-      font-size: 1.8rem;
-      text-align: center;
-      font-weight: bold;
-      letter-spacing: 0;
+
+  &-heading {
+    padding: 20rem 0 15rem 0;
+  }
+  &-container {
+    padding-bottom: 5rem;
+    &-cards {
+      width: 200px;
+      &-img {
+        width: 185px;
+        height: 58px;
+      }
+      &-heading {
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 0;
+      }
     }
   }
 }
 .footer {
   padding: 32.5rem 0 4.5rem 0;
   font-size: 1.8rem;
+  border: 0.1rem solid #707070;
 }
 
 // CSS
@@ -302,6 +339,8 @@ html {
   font-size: 1.8rem;
   text-align: center;
   font-weight: bold;
+  background-color: white !important;
+  border-bottom: none !important;
 }
 .paragraph {
   font-size: 1.8rem;

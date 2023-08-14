@@ -45,10 +45,7 @@ html {
     width: inherit; }
     .header_container-logo {
       height: 4.8rem;
-      width: 16.4rem;
-      border: 1px solid #707070;
-      display: grid;
-      place-items: center; }
+      width: 16.4rem; }
     .header_container-nav-list-item {
       font-size: 1.9rem;
       font-weight: 600; }
@@ -58,48 +55,78 @@ html {
         outline: none;
         border: none; }
 
-.artboard-info {
-  flex: 0 0 40%; }
-  .artboard-info-heading {
-    font-size: 4rem;
-    text-align: left;
-    font-weight: 900;
-    line-height: 1.3; }
-  .artboard-info-para {
-    font-size: 1.8rem;
-    text-align: left;
-    padding-right: 6.5rem;
-    font-weight: normal; }
-  .artboard-info-btn {
-    margin-top: 3rem; }
-
-.artboard-image {
-  flex: 0 0 30%; }
+.artboard {
+  width: 100%;
+  height: auto; }
+  .artboard::after {
+    content: url("../images/wave upper.svg");
+    width: 100%;
+    height: 29%;
+    position: absolute;
+    bottom: 6.5rem;
+    left: 0; }
+  .artboard-info {
+    flex: 0 0 40%;
+    height: max-content; }
+    .artboard-info-heading {
+      font-size: 4rem;
+      text-align: left;
+      font-weight: 900;
+      line-height: 1.3; }
+    .artboard-info-para {
+      font-size: 1.8rem;
+      text-align: left;
+      padding-right: 6.5rem;
+      font-weight: normal; }
+    .artboard-info-btn {
+      margin-top: 6rem; }
+  .artboard-image {
+    flex: 0 0 30%; }
 
 .cards-section {
-  width: inherit;
-  background: #f8fafc 0% 0% no-repeat padding-box; }
-  .cards-section_heading {
-    padding: 18rem 0 8rem 0; }
-  .cards-section_cards-card {
-    width: 30.8rem;
-    height: 32rem;
-    background: #ffffff 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 18px;
-    padding: 3.8rem 1rem;
-    margin-top: 5rem; }
-    .cards-section_cards-card-heading {
-      background: white; }
-    .cards-section_cards-card-info {
-      margin-top: 1.8rem; }
+  width: 100%;
+  height: max-content;
+  background: #f8fafc; }
+  .cards-section_upper-heading {
+    padding-top: 17rem; }
+  .cards-section_lower-headings {
+    padding-top: 20rem; }
+  .cards-section_cards {
+    width: 100%;
+    gap: 5rem; }
+    .cards-section_cards-card {
+      width: 30.8rem;
+      height: 32rem;
+      background: #ffffff;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 18px;
+      padding: 3.8rem 1rem;
+      margin-top: 7rem; }
+      .cards-section_cards-card-heading {
+        background: white; }
+      .cards-section_cards-card-info {
+        margin-top: 1.8rem; }
 
-.images-card-section-card {
-  width: 328px;
-  height: 168px; }
-  .images-card-section-card-img {
-    width: 241px;
-    height: 157px; }
+.images-card-section {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/wave lower.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 6rem; }
+  .images-card-section-card {
+    width: 32.8rem;
+    height: 16.8rem;
+    margin-top: 20rem;
+    padding: 0 0.2rem; }
+    .images-card-section-card-img {
+      width: 18.5rem;
+      height: 17.1rem; }
+    .images-card-section-card-heading {
+      text-align: start !important;
+      padding: 2rem 0 !important; }
+    .images-card-section-card-info {
+      text-align: start !important; }
 
 .primary-btn {
   width: 24.7rem;
@@ -111,7 +138,9 @@ html {
   cursor: pointer;
   border-radius: 10rem;
   display: grid;
-  place-items: center; }
+  place-items: center;
+  position: relative;
+  z-index: 999; }
 
 .thirsary-heading {
   font-size: 3.5rem;
@@ -123,12 +152,15 @@ html {
 
 .zigzag-card_container {
   width: 70%;
+  height: auto;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column; }
+  gap: 3rem; }
+  .zigzag-card_container-heading {
+    padding: 45rem 0 10rem 0; }
   .zigzag-card_container-left-card, .zigzag-card_container-right-card {
     width: 64.4rem;
-    align-self: flex-start; }
+    align-self: flex-start;
+    gap: 2.3rem; }
     .zigzag-card_container-left-card-header-img, .zigzag-card_container-right-card-header-img {
       height: 7rem;
       width: 7rem; }
@@ -143,16 +175,13 @@ html {
     align-self: flex-end; }
 
 .lorem-heading {
-  font-size: 3.5rem;
-  font-weight: bold;
-  text-align: center;
   padding: 15rem 0 6rem 0; }
 
 .lorem-slider {
   width: 109.7rem;
   height: 36.3rem;
   margin: 0 auto;
-  background: #f8fafc 0% 0% no-repeat padding-box;
+  background: #f8fafc;
   box-shadow: 0px 16px 48px #00000029;
   border-radius: 42px;
   padding: 4.5rem;
@@ -182,6 +211,7 @@ html {
   .lorem-slider-cards {
     transform: translateY(15%); }
     .lorem-slider-cards-card {
+      position: relative;
       width: 28.5rem;
       height: 26.3rem;
       background: white;
@@ -197,6 +227,13 @@ html {
         font-weight: 600;
         letter-spacing: 0; }
       .lorem-slider-cards-card-header-info-designation, .lorem-slider-cards-card-header-designation-designation {
+        width: fit-content;
+        height: auto;
+        position: absolute;
+        top: 5rem;
+        left: 8rem;
+        font-size: 1.2rem;
+        font-weight: 600;
         color: #615c5c; }
       .lorem-slider-cards-card-header-rating {
         margin-left: auto; }
@@ -213,20 +250,25 @@ html {
 .banner {
   padding: 13rem 0;
   gap: 15rem; }
-  .banner-cards {
-    width: 200px; }
-    .banner-cards-img {
-      width: 185px;
-      height: 58px; }
-    .banner-cards-heading {
-      font-size: 1.8rem;
-      text-align: center;
-      font-weight: bold;
-      letter-spacing: 0; }
+  .banner-heading {
+    padding: 20rem 0 15rem 0; }
+  .banner-container {
+    padding-bottom: 5rem; }
+    .banner-container-cards {
+      width: 200px; }
+      .banner-container-cards-img {
+        width: 185px;
+        height: 58px; }
+      .banner-container-cards-heading {
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 0; }
 
 .footer {
   padding: 32.5rem 0 4.5rem 0;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  border: 0.1rem solid #707070; }
 
 .secondary-heading {
   font-size: 3.5rem;
@@ -236,7 +278,9 @@ html {
 .card-header {
   font-size: 1.8rem;
   text-align: center;
-  font-weight: bold; }
+  font-weight: bold;
+  background-color: white !important;
+  border-bottom: none !important; }
 
 .paragraph {
   font-size: 1.8rem;
